@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B00000">
+
+    <FrameLayout
+        android:id="@+id/page1Santa"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#B00000">
+
+        <ImageView
+            android:id="@+id/santaImage"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_gravity="center_vertical"
+            android:translationX="-220dp"
+            android:contentDescription="Santa Animation"/>
+
+    </FrameLayout>
+
