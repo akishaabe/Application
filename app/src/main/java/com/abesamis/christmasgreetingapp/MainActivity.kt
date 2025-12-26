@@ -48,19 +48,19 @@ class MainActivity : AppCompatActivity() {
     private fun loadSantaGif() {
     Glide.with(this)
         .asGif()
-        .load("file//android_asset/santa_sled.gif")
+        .load("file:///android_asset/santa_sled.gif")
         .into(santaImage)
     }
 
     private fun loadSnowGifs() {
         Glide.with(this)
             .asGif()
-            .load("file//androidn_assets/snow.gif")
+            .load("file:///android_asset/snow.gif")
             .into(snowGifLoading)
 
         Glide.with(this)
             .asGif()
-            .load("file//androidn_assets/snow.gif")
+            .load("file:///android_asset/snow.gif")
             .into(snowGifMessage)
     }
 

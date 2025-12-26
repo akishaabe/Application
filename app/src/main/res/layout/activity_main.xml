@@ -17,9 +17,10 @@
         <ImageView
             android:id="@+id/santaImage"
             android:layout_width="180dp"
-            android:layout_height="180dp"
+            android:layout_height="120dp"
             android:layout_gravity="center_vertical"
-            android:translationX="-220dp"
+            android:translationX="-250dp"
+            android:scaleType="fitCenter"
             android:contentDescription="Santa Animation"/>
 
     </FrameLayout>
@@ -82,24 +83,24 @@
 
                 <TextView
                     android:text="Greetings!"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:textSize="22sp"
                     android:textStyle="bold"
                     android:textColor="#2E7D32"
                     android:paddingBottom="12dp"/>
                 <TextView
                     android:text="Merry Christmas! 🎄\nMay your holidays be filled with joy, love, and peace."
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:textSize="16sp"
                     android:lineSpacingExtra="6dp"
                     android:paddingBottom="16dp" />
 
                 <TextView
                     android:text="Dedicated to my family and friends"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:textSize="14sp"
                     android:textStyle="italic"
                     android:paddingBottom="24dp"/>
