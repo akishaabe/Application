@@ -6,20 +6,59 @@
     android:layout_height="match_parent"
     android:background="#B00000">
 
-    <!-- page 1: santa splash -->
+    <!-- page 0: Intro -->
+    <FrameLayout
+        android:id="@+id/page0Intro"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#B00000"
+        android:visibility="visible">
 
+        <ImageView
+            android:id="@+id/staticSantaImage"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="60dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:contentDescription="A portrait of Santa Claus"
+            android:src="@drawable/santa_portrait" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginBottom="150dp"
+            android:fontFamily="@font/great_vibes"
+            android:gravity="center"
+            android:text="Hello there!\nClick Santa to see a surprise"
+            android:textColor="@android:color/white"
+            android:textSize="40sp"
+            android:shadowColor="#000000"
+            android:shadowDx="1.5"
+            android:shadowDy="1.3"
+            android:shadowRadius="1.6"/>
+
+    </FrameLayout>
+
+    <!-- page 1: santa splash -->
     <FrameLayout
         android:id="@+id/page1Santa"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#B00000">
+        android:background="#B00000"
+        android:visibility="gone">
 
         <ImageView
             android:id="@+id/santaImage"
-            android:layout_width="180dp"
-            android:layout_height="120dp"
-            android:layout_gravity="center_vertical"
-            android:translationX="-250dp"
+            android:layout_width="220dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:scaleX="-1"
             android:scaleType="fitCenter"
             android:contentDescription="Santa Animation"/>
 
@@ -42,14 +81,40 @@
         android:scaleType="centerCrop"
         android:contentDescription="Snow Animation" />
 
-    <!-- the white card in loading page -->
-    <androidx.cardview.widget.CardView
-        android:layout_width="280dp"
-        android:layout_height="280dp"
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
-        app:cardCornerRadius="26dp"
-        app:cardElevation="6dp">
-    </androidx.cardview.widget.CardView>
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/merryText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Merry"
+            android:textColor="#FFD700"
+            android:textSize="70sp"
+            android:fontFamily="@font/great_vibes"
+            android:shadowColor="#000000"
+            android:shadowDx="1.5"
+            android:shadowDy="1.3"
+            android:shadowRadius="1.6" />
+
+        <TextView
+            android:id="@+id/christmasText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-30dp"
+            android:text="Christmas!"
+            android:textColor="#FFD700"
+            android:textSize="70sp"
+            android:fontFamily="@font/great_vibes"
+            android:shadowColor="#000000"
+            android:shadowDx="1.5"
+            android:shadowDy="1.3"
+            android:shadowRadius="1.6"/>
+    </LinearLayout>
 </FrameLayout>
 
     <!-- the message page -->
@@ -75,36 +140,63 @@
             app:cardCornerRadius="30dp"
             app:cardElevation="8dp">
 
-            <LinearLayout
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:padding="24dp">
+                android:layout_height="match_parent">
 
-                <TextView
-                    android:text="Greetings!"
-                    android:layout_width="wrap_content"
+                <ImageView
+                    android:id="@+id/ribbonImage"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="22sp"
-                    android:textStyle="bold"
-                    android:textColor="#2E7D32"
-                    android:paddingBottom="12dp"/>
-                <TextView
-                    android:text="Merry Christmas! 🎄\nMay your holidays be filled with joy, love, and peace."
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="16sp"
-                    android:lineSpacingExtra="6dp"
-                    android:paddingBottom="16dp" />
+                    android:layout_marginTop="-25dp"
+                    android:src="@drawable/red_ribbon"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="Ribbon" />
 
-                <TextView
-                    android:text="Dedicated to my family and friends"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="14sp"
-                    android:textStyle="italic"
-                    android:paddingBottom="24dp"/>
-            </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="24dp"
+                    android:paddingTop="100dp"
+                    android:paddingBottom="24dp"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:id="@+id/greetingsText"
+                        android:text="Greetings!"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="50sp"
+                        android:fontFamily="@font/great_vibes"
+                        android:textColor="#2E7D32"
+                        android:layout_marginBottom="16dp"/>
+                    <TextView
+                        android:text="Merry Christmas! 🎄\nMay your holidays be filled with joy, love, and peace."
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:lineSpacingExtra="6dp"
+                        android:gravity="center"
+                        android:layout_marginBottom="16dp"/>
+
+                    <TextView
+                        android:text="Dedicated to my family and friends"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textStyle="italic"
+                        android:layout_marginBottom="16dp"/>
+
+                    <Button
+                        android:id="@+id/thankYouButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Thank you!" />
+                </LinearLayout>
+
+            </FrameLayout>
 
         </androidx.cardview.widget.CardView>
     </FrameLayout>
